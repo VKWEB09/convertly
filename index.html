@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Image Converter Online - JPG, PNG, WEBP, HEIC | Convertly</title>
+    <meta name="description"
+        content="Convert JPG, PNG, WEBP and HEIC images online for free. No upload. No signup. 100% secure browser-based conversion.">
+    <link rel="canonical" href="https://convertly.com/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Convertly — Client-Side File Processing Matrix">
+    <meta property="og:description" content="Zero upload file adjustments natively via browser storage logic safely.">
+    <meta property="og:url" content="https://convertly.com/">
+    <meta property="og:image" content="https://convertly.com/images/og-share.jpg">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" aria-label="Convertly Home">
+                <span>Convertly</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="#tools">Tools</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-btn"
+                    aria-label="Toggle structural interface system design dark preference">
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- <div class="adsense-placeholder">Advertisements Placement Zone Container</div> -->
+
+        <section class="section-padding text-center">
+            <h1 style="font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem;">
+                Free Image Converter<br>
+                <span
+                    style="background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 2rem; line-height: 40px; display: block; margin-top: 24px;">Convert
+                    JPG, PNG, WEBP and HEIC <br> in your browser.</span>
+            </h1>
+            <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto 3rem auto;">
+                No Upload • No Signup • 100% Private
+            </p>
+
+            <div class="upload-wrapper">
+                <div id="coreDropzone" class="dropzone">
+                    <input type="file" id="coreFileInput" class="file-input-hidden" multiple accept="image/*">
+                    <div class="dropzone-icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Drag & drop files here or click to choose
+                    </h3>
+                    <p style="font-size: 0.875rem;">Supports JPG, PNG, WEBP, HEIC image asset distributions</p>
+                    <div class="format-tags">
+                        <span class="tag">JPG</span>
+                        <span class="tag">PNG</span>
+                        <span class="tag">WEBP</span>
+                        <span class="tag">HEIC</span>
+                    </div>
+                </div>
+
+                <div id="conversionQueue" class="queue-container"></div>
+            </div>
+        </section>
+
+        <section id="tools" class="section-padding">
+            <h2 class="text-center" style="font-size: 2.25rem; margin-bottom: 0.5rem;">Popular Tools</h2>
+            <p class="text-center" style="font-size: 20px;">Choose the image tool you need
+                fast, secure and browser-based.</p>
+
+            <div class="tools-grid">
+                <a href="webp-to-jpg.html" class="tool-card">
+                    <div class="tool-icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                    </div>
+                    <h3>WEBP to JPG</h3>
+                    <p style="font-size: 0.875rem;">Convert WEBP images to JPG in seconds.</p>
+                </a>
+                <a href="jpg-to-png.html" class="tool-card">
+                    <div class="tool-icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <h3>JPG to PNG</h3>
+                    <p style="font-size: 0.875rem;">Convert compressed legacy formats into alpha-transparent lossless
+                        channel arrays.</p>
+                </a>
+                <a href="png-to-jpg.html" class="tool-card">
+                    <div class="tool-icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z">
+                                </circle>
+                        </svg>
+                    </div>
+                    <h3>PNG to JPG</h3>
+                    <p style="font-size: 0.875rem;">Optimize complex flat vector or alpha canvas maps into generic
+                        standard assets.</p>
+                </a>
+                <a href="heic-to-jpg.html" class="tool-card">
+                    <div class="tool-icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                            <line x1="7" y1="2" x2="7" y2="22"></line>
+                            <line x1="17" y1="2" x2="17" y2="22"></line>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <line x1="2" y1="7" x2="7" y2="7"></line>
+                            <line x1="2" y1="17" x2="7" y2="17"></line>
+                            <line x1="17" y1="17" x2="22" y2="17"></line>
+                            <line x1="17" y1="7" x2="22" y2="7"></line>
+                        </svg>
+                    </div>
+                    <h3>HEIC to JPG</h3>
+                    <p style="font-size: 0.875rem;">Decode high-efficiency Apple ecosystem structures down to modern
+                        platform baselines.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- <div class="adsense-placeholder">Advertisements Placement Zone Container</div> -->
+
+        <section id="features" class="section-padding">
+            <h2 class="text-center" style="font-size: 2.25rem; margin-bottom: 3rem;">Why Choose Convertly?</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div
+                    style="background: var(--cards); padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--border);">
+                    <h3
+                        style="margin-bottom: 0.75rem; font-size: 1.25rem; display: flex; align-items: center; gap: 0.5rem; color: var(--primary);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                        100% Private
+                    </h3>
+                    <p>File content processing matrix arrays parse only using computing resources local to the
+                        initialization sandbox execution thread. No transmissions loop externally.</p>
+                </div>
+                <div
+                    style="background: var(--cards); padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--border);">
+                    <h3
+                        style="margin-bottom: 0.75rem; font-size: 1.25rem; display: flex; align-items: center; gap: 0.5rem; color: var(--secondary);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                        Lightning Fast
+                    </h3>
+                    <p>Avoid internet latency limitations entirely. Transformations finalize at computational limits
+                        corresponding natively with localized hardware performance capabilities.</p>
+                </div>
+                <div
+                    style="background: var(--cards); padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--border);">
+                    <h3
+                        style="margin-bottom: 0.75rem; font-size: 1.25rem; display: flex; align-items: center; gap: 0.5rem; color: var(--success);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h1"></path>
+                            <path d="M18 8h4a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-3"></path>
+                            <path d="M11 2h4a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        Works Offline
+                    </h3>
+                    <p>Designed decoupled from cloud-reliant networking protocols. Load once, store context assets, and
+                        convert images inside isolated remote environments reliably.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="section-padding">
+            <h2 class="text-center" style="font-size: 2.25rem; margin-bottom: 1rem;">Frequently Asked Questions</h2>
+            <div class="faq-wrapper">
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        Are my images uploaded to your server?
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-content">
+                        <p>No. Everything happens inside your browser.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        Will image quality decrease?
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-content">
+                        <p>No. Original resolution is preserved.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo"><span>Convertly</span></a>
+                <p>Fast, secure and private image conversion directly in your browser.</p>
+            </div>
+            <div>
+                <h4 class="footer-heading">Tools</h4>
+                <ul class="footer-links">
+                    <li><a href="webp-to-jpg.html">WEBP to JPG Matrix</a></li>
+                    <li><a href="jpg-to-png.html">JPG to PNG Engine</a></li>
+                    <li><a href="png-to-jpg.html">PNG to JPG Module</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-heading">Company</h4>
+                <ul class="footer-links">
+                    <li><a href="privacy.html">Privacy Protections Framework</a></li>
+                    <li><a href="privacy.html#terms">Terms of Operation Protocol</a></li>
+                    <li><a href="#">Legal</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-heading">Support</h4>
+                <ul class="footer-links">
+                    <li><a href="mailto:support@convertly.local">Direct Developer Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom text-center">
+            <div> © 2026 Convertly. All Rights Reserved.
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/upload.js"></script>
+    <script src="js/converter.js"></script>
+    <script>
+        // Mount primary system drag module bindings specifically contextually mapped for standard landing layouts
+        document.addEventListener('DOMContentLoaded', () => {
+            new FileUploader('coreDropzone', 'coreFileInput');
+        });
+    </script>
+</body>
+
+</html>

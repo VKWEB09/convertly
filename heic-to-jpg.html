@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HEIC to JPG Converter – Convert iPhone Photos Online Free | Convertly</title>
+    <meta name="description"
+        content="Convert Apple HEIC photos to JPG online for free. Fast, secure and private browser-based conversion. No upload or registration required.">
+    <link rel="canonical" href="https://convertly.com/heic-to-jpg.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Convert Apple HEIC to JPG Free Online — Convertly">
+    <meta property="og:description"
+        content="Convert Apple HEIC photos to JPG instantly. Zero server uploads. High-performance browser-native conversion.">
+    <meta property="og:url" content="https://convertly.com/heic-to-jpg.html">
+    <meta property="og:image" content="https://convertly.com/images/og-share.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Convert Apple HEIC to JPG Free Online — Convertly">
+    <meta name="twitter:description"
+        content="Convert Apple HEIC photos to JPG instantly inside your browser. No upload, 100% private.">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Convertly HEIC to JPG Converter",
+      "url": "https://convertly.com/heic-to-jpg.html",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires HTML5 Canvas, File API, and HEIC parsing support.",
+      "description": "Convert Apple HEIC photos to JPG instantly inside your browser. No upload, 100% private.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0"
+      }
+    }
+    </script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <script src="https://unpkg.com/heic2any@0.0.4/dist/heic2any.min.js"></script>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" aria-label="Convertly Home"><span>Convertly</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="webp-to-jpg.html">WEBP to JPG</a></li>
+                    <li><a href="jpg-to-png.html">JPG to PNG</a></li>
+                    <li><a href="png-to-jpg.html">PNG to JPG</a></li>
+                    <li><a href="heic-to-jpg.html" class="active">HEIC to JPG</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-btn"
+                    aria-label="Toggle structural interface system design preference">
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- <div class="adsense-placeholder">Advertisements Placement Zone Container</div> -->
+
+        <section class="section-padding text-center">
+            <h1 style="font-size: 2.75rem; font-weight: 800; margin-bottom: 1rem;">HEIC to JPG Converter</h1>
+            <p style="max-width: 600px; margin: 0 auto 2.5rem auto;">
+                Convert HEIC photos from iPhone and iPad to JPG instantly. No upload, no signup and 100% private
+                browser-based conversion.
+            </p>
+
+            <div class="upload-wrapper">
+                <div id="heicDropzone" class="dropzone">
+                    <input type="file" id="heicFileInput" class="file-input-hidden" multiple accept=".heic, .HEIC">
+                    <div class="dropzone-icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Drag & Drop HEIC files here
+
+                        or click to browse</h3>
+                    <p style="font-size: 0.85rem; margin-top: 0.25rem;">Supports HEIC files.
+                        Maximum file size: 20 MB.</p>
+                </div>
+
+                <div class="conversion-config-panel">
+                    <div class="config-group">
+                        <div style="display: flex; justify-content: space-between;">
+                            <label for="config-quality">Target Compression Matrix Value Profile (Quality Level
+                                Ratio)</label>
+                            <span id="quality-display" style="font-weight: 700; color: var(--primary);">92%</span>
+                        </div>
+                        <input type="range" id="config-quality" min="0.1" max="1.0" step="0.01" value="0.92">
+                    </div>
+                </div>
+
+                <div id="conversionQueue" class="queue-container"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-bottom">
+            <div>© 2026 Convertly. All rights reserved.</div>
+            <div><a href="index.html" style="color: var(--text-muted);">← Back to Home</a></div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/upload.js"></script>
+
+    <script src="js/converter.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            new FileUploader('heicDropzone', 'heicFileInput', { allowedTypes: ['.heic'] });
+
+            const rangeInput = document.getElementById('config-quality');
+            const displayEl = document.getElementById('quality-display');
+            if (rangeInput && displayEl) {
+                rangeInput.addEventListener('input', (e) => {
+                    displayEl.innerText = Math.round(e.target.value * 100) + '%';
+                });
+            }
+
+            // Architecture Interceptor: Gracefully enhance window.ConverterEngine for HEIC streams
+            if (window.ConverterEngine) {
+                window.ConverterEngine.determineTargetFormat = function () {
+                    return 'image/jpeg';
+                };
+
+                window.ConverterEngine.executeCanvasTransformation = async function (file, format) {
+                    try {
+                        let blobToProcess = file;
+
+                        // Parse HEIC format blobs into a standard browser-readable JPEG blob via the CDN module instance
+                        if (typeof heic2any !== 'undefined') {
+                            const conversionResult = await heic2any({
+                                blob: file,
+                                toType: "image/jpeg",
+                                quality: parseFloat(document.getElementById('config-quality')?.value) || 0.92
+                            });
+                            blobToProcess = Array.isArray(conversionResult) ? conversionResult[0] : conversionResult;
+                        }
+
+                        return new Promise((resolve, reject) => {
+                            const reader = new FileReader();
+                            reader.onload = (event) => {
+                                const img = new Image();
+                                img.onload = () => {
+                                    const canvas = document.createElement('canvas');
+                                    const ctx = canvas.getContext('2d');
+                                    canvas.width = img.naturalWidth;
+                                    canvas.height = img.naturalHeight;
+                                    ctx.fillStyle = '#FFFFFF';
+                                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+                                    ctx.drawImage(img, 0, 0);
+
+                                    canvas.toBlob((finalBlob) => {
+                                        if (finalBlob) resolve(finalBlob);
+                                        else reject(new Error('Canvas compilation breakdown'));
+                                    }, 'image/jpeg', 1.0);
+                                };
+                                img.onerror = () => reject(new Error('HEIC stream mapping breakdown'));
+                                img.src = event.target.result;
+                            };
+                            reader.onerror = () => reject(new Error('File access mapping breakdown'));
+                            reader.readAsDataURL(blobToProcess);
+                        });
+                    } catch (error) {
+                        console.error("HEIC parsing exception:", error);
+                        throw error;
+                    }
+                };
+            }
+        });
+    </script>
+</body>
+
+</html>

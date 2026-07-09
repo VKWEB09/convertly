@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert WEBP to JPG Free — Convertly Privacy Suite</title>
+    <meta name="description"
+        content="Convert your WEBP files into high-quality JPG images directly inside your browser. No server logs, instant downloads, zero usage limitations.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" aria-label="Convertly Home"><span>Convertly</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="webp-to-jpg.html" class="active">WEBP to JPG</a></li>
+                    <li><a href="jpg-to-png.html">JPG to PNG</a></li>
+                    <li><a href="png-to-jpg.html">PNG to JPG</a></li>
+                    <li><a href="heic-to-jpg.html">HEIC to JPG</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-btn"
+                    aria-label="Toggle structural interface system design preference">
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- <div class="adsense-placeholder">Advertisements Placement Zone Container</div> -->
+
+        <section class="section-padding text-center">
+            <h1 style="font-size: 2.75rem; font-weight: 800; margin-bottom: 1rem;">WEBP to JPG Converter</h1>
+            <p style="max-width: 600px; margin: 0 auto 2.5rem auto;">Convert WEBP images to JPG instantly. <br>
+
+                No Upload. <br>
+
+                100% Private. <br>
+
+                Works in your browser.</p>
+
+            <div class="upload-wrapper">
+                <div id="webpDropzone" class="dropzone">
+                    <input type="file" id="webpFileInput" class="file-input-hidden" multiple accept="image/webp">
+                    <div class="dropzone-icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Drag & Drop WEBP files here
+
+                        or click to browse.</h3>
+                    <p style="font-size: 0.85rem; margin-top: 0.25rem;">Supports JPG and JPEG files.
+                        Maximum file size: 20 MB.</p>
+                </div>
+
+                <div class="conversion-config-panel">
+                    <div class="config-group">
+                        <div style="display: flex; justify-content: space-between;">
+                            <label for="config-quality">Image Quality</label>
+                            <span id="quality-display" style="font-weight: 700; color: var(--primary);">92%</span>
+                        </div>
+                        <input type="range" id="config-quality" min="0.1" max="1.0" step="0.01" value="0.92">
+                    </div>
+                </div>
+
+                <div id="conversionQueue" class="queue-container"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-bottom">
+            <div>© 2026 Convertly. All rights reserved.</div>
+            <div><a href="index.html" style="color: var(--text-muted);">← Back to Home</a></div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/upload.js"></script>
+    <script src="js/converter.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Instantiate target direct upload listener scope configuration profiles mappings natively
+            new FileUploader('webpDropzone', 'webpFileInput', { allowedTypes: ['image/webp'] });
+
+            // Wire dynamic sliding quality adjustment text value component update listeners standard loop mappings
+            const rangeInput = document.getElementById('config-quality');
+            const displayEl = document.getElementById('quality-display');
+            if (rangeInput && displayEl) {
+                rangeInput.addEventListener('input', (e) => {
+                    displayEl.innerText = Math.round(e.target.value * 100) + '%';
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
