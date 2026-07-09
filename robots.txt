@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
-Disallow: /404.html
+Allow: /*.html
+Allow: /css/
+Allow: /js/
 
-Sitemap: https://convertly.com/sitemap.xml
+Sitemap: https://convertlyfree.vercel.app/sitemap.xml
