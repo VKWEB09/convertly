@@ -1,7 +1,13 @@
 User-agent: *
+
 Allow: /
+
 Allow: /*.html
+
 Allow: /css/
+
 Allow: /js/
+
+Allow: /img/
 
 Sitemap: https://convertlyfree.vercel.app/sitemap.xml
