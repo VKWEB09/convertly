@@ -146,6 +146,10 @@ textarea {
     outline-offset: 2px;
 }
 
+.logo {
+    height:35px;
+}
+
 /* Navigation Bar */
 .navbar {
     position: sticky;

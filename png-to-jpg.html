@@ -22,6 +22,10 @@
     <meta name="twitter:description"
         content="Convert PNG images to JPG instantly inside your browser. No upload, 100% private.">
 
+    <link href="img/favicon.png" rel="icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -54,9 +58,6 @@
 }
 </script>
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/responsive.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-650KW0J3BQ"></script>
     <script>
@@ -75,7 +76,9 @@
 
     <header class="navbar">
         <div class="container nav-container">
-            <a href="index.html" class="logo" aria-label="Convertly Home"><span>Convertly</span></a>
+            <a href="index.html" class="logo" aria-label="Convertly Home">
+                <img src="img/logo.png" alt="logo" class="logo">
+            </a>
             <nav>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
@@ -164,9 +167,40 @@
     </main>
 
     <footer class="footer">
-        <div class="container footer-bottom">
-            <div>© 2026 Convertly. All rights reserved.</div>
-            <div><a href="index.html" style="color: var(--text-muted);">← Back to Home</a></div>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo"><img src="img/logo.png" alt="logo" class="logo"></a>
+                <p>Fast, secure and private image conversion directly in your browser.</p>
+            </div>
+            <div>
+                <h4 class="footer-heading">Images Tools</h4>
+                <ul class="footer-links">
+                    <li><a href="webp-to-jpg.html">WEBP to JPG</a></li>
+                    <li><a href="jpg-to-png.html">JPG to PNG</a></li>
+                    <li><a href="png-to-jpg.html">PNG to JPG</a></li>
+                    <li><a href="heic-to-jpg.html">HEIC to JPG</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-heading">Company</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-heading">Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html"> Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom text-center">
+            <div> © 2026 Convertly. All Rights Reserved.
+            </div>
+
         </div>
     </footer>
 
