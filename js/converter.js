@@ -17,12 +17,27 @@ window.ConverterEngine = {
 
             // Setup programmatic targeted format based on contextual view routing setup
             const targetFormat = this.determineTargetFormat();
+            // Google Analytics Event - Conversion Started
+            if (typeof gtag === "function") {
+                gtag("event", "image_convert_start", {
+                    tool_name: window.location.pathname.replace("/", "").replace(".html", ""),
+                    file_name: file.name,
+                    file_size: file.size
+                });
+            }
             const processedBlob = await this.executeCanvasTransformation(file, targetFormat);
 
             this.simulateProgress(fillEl, 45, 100, 100);
 
             setTimeout(() => {
                 this.triggerNativeDownload(processedBlob, file.name, targetFormat);
+                // Google Analytics Event - Conversion Success
+                if (typeof gtag === "function") {
+                    gtag("event", "image_convert_success", {
+                        tool_name: window.location.pathname.replace("/", "").replace(".html", ""),
+                        output_format: targetFormat
+                    });
+                }
                 if (UI) UI.showToast(`Converted ${file.name} successfully!`);
                 if (triggerBtn) {
                     triggerBtn.innerText = "Downloaded";
@@ -101,6 +116,14 @@ window.ConverterEngine = {
         a.download = `${baseName}_converted.${ext}`;
         document.body.appendChild(a);
         a.click();
+        // Google Analytics Event - Image Download
+        if (typeof gtag === "function") {
+            gtag("event", "image_download", {
+                tool_name: window.location.pathname.replace("/", "").replace(".html", ""),
+                file_name: a.download,
+                output_format: mimeType
+            });
+        }
 
         // Instant GC pipeline memory recovery optimization
         setTimeout(() => {

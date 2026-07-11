@@ -39,6 +39,15 @@ class FileUploader {
 
             // Push to application local memory registry without structural mutability leaks
             window.Convertly.state.queuedFiles.set(uniqueId, file);
+            // Google Analytics Event - Image Upload
+            if (typeof gtag === "function") {
+                gtag("event", "image_upload", {
+                    tool_name: window.location.pathname.replace("/", "").replace(".html", ""),
+                    file_name: file.name,
+                    file_type: file.type,
+                    file_size: file.size
+                });
+            }
         });
     }
 
